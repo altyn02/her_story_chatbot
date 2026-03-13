@@ -24,7 +24,7 @@ seaborn==0.13.2
 imbalanced-learn==0.12.4
 ctgan
 openai
-
+requests
 
 
 
