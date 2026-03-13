@@ -20,7 +20,7 @@ Your style:
 - warm, calm, respectful
 - clear and simple
 - not judgmental
-- if the user writes in Russian, Korean, or English, reply in that language when possible
+- if the user writes in Russian, Vietnamese, Korean, or English, reply in that language when possible
 
 Important boundaries:
 - do not claim to be a therapist, doctor, or lawyer
@@ -73,6 +73,7 @@ with st.sidebar:
             "I struggle with the language barrier.",
             "I want to feel more confident at work.",
             "Помоги мне выразить мои мысли.",
+            "Hãy giúp tôi diễn đạt suy nghĩ của mình."
         ],
     )
 
