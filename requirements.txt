@@ -25,6 +25,7 @@ imbalanced-learn==0.12.4
 ctgan
 openai
 requests
+ollama
 
 
 
