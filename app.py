@@ -156,7 +156,7 @@ content = {
         "brand_sub": "A gentle, multilingual support concept",
     },
     "한국어": {
-        "nav": ["Home", "About", "Our Service", "Target Users", "Future Vision", "Contact"],
+        "nav": ["홈", "소개", "서비스", "대상 사용자", "향후 비전", "문의"],
         "hero_title": "Her Story",
         "hero_subtitle": "한국에 거주하는 이주여성을 위한 따뜻한 디지털 공간",
         "hero_text": (
@@ -207,7 +207,7 @@ content = {
         "brand_sub": "따뜻한 다국어 지원 서비스 컨셉",
     },
     "Русский": {
-        "nav": ["Home", "About", "Our Service", "Target Users", "Future Vision", "Contact"],
+        "nav": ["Главная", "О проекте", "Наш сервис", "Для кого", "Будущее", "Контакты"],
         "hero_title": "Her Story",
         "hero_subtitle": "Поддерживающее цифровое пространство для мигранток в Корее",
         "hero_text": (
@@ -270,7 +270,7 @@ content = {
         "brand_sub": "Мягкая многоязычная концепция поддержки",
     },
     "Tiếng Việt": {
-        "nav": ["Home", "About", "Our Service", "Target Users", "Future Vision", "Contact"],
+        "nav": ["Trang chủ", "Giới thiệu", "Dịch vụ", "Người dùng", "Tầm nhìn", "Liên hệ"],
         "hero_title": "Her Story",
         "hero_subtitle": "Không gian kỹ thuật số hỗ trợ phụ nữ nhập cư tại Hàn Quốc",
         "hero_text": (
