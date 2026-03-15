@@ -348,55 +348,7 @@ with col2:
 T = content[language]
 page = st.radio("", T["nav"], horizontal=True)
 
-st.markdown(
-    f"""
-    <div class="topbar">
-        <div class="brand-wrap">
-            <div class="chatbot-icon">🤖</div>
-            <div>
-                <p class="brand-title">🌸Re: Her Chatbot</p>
-                <p class="brand-sub">{T['brand_sub']}</p>
-            </div>
-        </div>
-    </div>
-    """,
-    unsafe_allow_html=True,
-)
-
-# -----------------------------
-# Save contact submissions
-# -----------------------------
-def save_contact(name, email, message, language_used):
-    file_path = "contact_messages.csv"
-    file_exists = os.path.isfile(file_path)
-
-    with open(file_path, mode="a", newline="", encoding="utf-8") as file:
-        writer = csv.writer(file)
-        if not file_exists:
-            writer.writerow(["timestamp", "name", "email", "message", "language"])
-        writer.writerow([
-            datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-            name,
-            email,
-            message,
-            language_used,
-        ])
-
-# -----------------------------
-# Pages
-# -----------------------------
-if page == T["nav"][0]:
-    st.markdown(
-        f"""
-        <div class="hero">
-            <h1>{T['hero_title']}</h1>
-            <h3>{T['hero_subtitle']}</h3>
-            <p style="font-size: 1.05rem;">{T['hero_text']}</p>
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
-    CHATBOT_URL = "https://claude.ai/public/artifacts/b41dd0b5-9521-4854-bf05-14ac487c5b5b"
+CHATBOT_URL = "https://claude.ai/public/artifacts/b41dd0b5-9521-4854-bf05-14ac487c5b5b"
 
     st.markdown(
         f"""
@@ -464,6 +416,41 @@ if page == T["nav"][0]:
         unsafe_allow_html=True,
     )
 
+# -----------------------------
+# Save contact submissions
+# -----------------------------
+def save_contact(name, email, message, language_used):
+    file_path = "contact_messages.csv"
+    file_exists = os.path.isfile(file_path)
+
+    with open(file_path, mode="a", newline="", encoding="utf-8") as file:
+        writer = csv.writer(file)
+        if not file_exists:
+            writer.writerow(["timestamp", "name", "email", "message", "language"])
+        writer.writerow([
+            datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+            name,
+            email,
+            message,
+            language_used,
+        ])
+
+# -----------------------------
+# Pages
+# -----------------------------
+if page == T["nav"][0]:
+    st.markdown(
+        f"""
+        <div class="hero">
+            <h1>{T['hero_title']}</h1>
+            <h3>{T['hero_subtitle']}</h3>
+            <p style="font-size: 1.05rem;">{T['hero_text']}</p>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
+
     col1, col2 = st.columns(2)
     with col1:
         st.button(T["button_1"], use_container_width=True)
@@ -486,8 +473,9 @@ if page == T["nav"][0]:
 
     st.write("")
     st.image(
-        "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1600&auto=format&fit=crop",
-        use_container_width=True,
+        "image/migrant_women_korea.jpg",
+        caption="Supporting migrant and marriage migrant women in Korea",
+        use_container_width=True
     )
 
 elif page == T["nav"][1]:
