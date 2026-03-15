@@ -54,7 +54,7 @@ page = st.sidebar.radio(
     ["Home", "About", "Our Service", "Target Users", "Future Vision", "Contact"]
 )
 
-language = st.sidebar.selectbox("Language", ["English", "한국어", "Русский"])
+language = st.sidebar.selectbox("Language", ["English", "한국어", "Русский", "Tiếng Việt"])
 
 # -----------------------------
 # Multilingual text
@@ -206,6 +206,59 @@ content = {
         "footer": "Прототип сайта, созданный на Streamlit.",
         "key_elements": "Ключевые элементы",
         "why_matters": "Почему это важно",
+    }, 
+        "Tiếng Việt": {
+        "hero_title": "Re:Her",
+        "hero_subtitle": "Không gian kỹ thuật số hỗ trợ phụ nữ nhập cư tại Hàn Quốc",
+        "hero_text": (
+            "Re:Her được thiết kế như một dịch vụ kỹ thuật số đa ngôn ngữ "
+            "nhằm hỗ trợ sức khỏe tinh thần, sự tự phản ánh và giúp tiếp cận thông tin dễ dàng hơn."
+        ),
+        "button_1": "Khám phá dịch vụ",
+        "button_2": "Tầm nhìn tương lai",
+        "cards": [
+            ("Hỗ trợ đa ngôn ngữ",
+             "Người dùng có thể sử dụng nền tảng bằng ngôn ngữ mà họ cảm thấy thoải mái nhất."),
+            ("Tự phản ánh và hỗ trợ",
+             "Dịch vụ giúp người dùng thể hiện cảm xúc, suy ngẫm về bản thân và nhận được hướng dẫn thực tế."),
+            ("Trải nghiệm thân thiện",
+             "Giao diện đơn giản và nhẹ nhàng giúp người dùng cảm thấy an toàn và được chào đón."),
+        ],
+        "about_title": "Giới thiệu về Re:Her",
+        "about_text": (
+            "Re:Her là một ý tưởng dịch vụ được tạo ra để hỗ trợ phụ nữ nhập cư "
+            "và phụ nữ kết hôn với người Hàn đang sống tại Hàn Quốc. "
+            "Dự án tập trung vào hỗ trợ cảm xúc, khả năng thể hiện bản thân "
+            "và tiếp cận thông tin hữu ích dễ dàng hơn."
+        ),
+        "service_title": "Dịch vụ của chúng tôi",
+        "service_text": (
+            "Dịch vụ được thiết kế như một nền tảng hỗ trợ kỹ thuật số đa ngôn ngữ. "
+            "Nó có thể bao gồm hỗ trợ viết phản ánh, hướng dẫn thực tế, "
+            "hỗ trợ cảm xúc và các công cụ AI trong tương lai."
+        ),
+        "target_title": "Đối tượng người dùng",
+        "target_text": (
+            "Người dùng chính là phụ nữ nhập cư và phụ nữ kết hôn với người Hàn "
+            "có thể gặp rào cản ngôn ngữ, cô lập xã hội, khó khăn trong thích nghi văn hóa "
+            "hoặc sự không chắc chắn trong cuộc sống hàng ngày."
+        ),
+        "future_title": "Tầm nhìn tương lai",
+        "future_text": (
+            "Trong tương lai, Re:Her có thể phát triển thành một nền tảng tương tác hơn "
+            "với hướng dẫn cá nhân hóa, tài nguyên cộng đồng, nội dung đa ngôn ngữ "
+            "và các công cụ AI hỗ trợ tự phản ánh."
+        ),
+        "contact_title": "Liên hệ",
+        "contact_text": "Để hợp tác, thử nghiệm dự án hoặc tìm hiểu thêm, vui lòng liên hệ với nhóm Re:Her.",
+        "form_name": "Tên",
+        "form_email": "Email",
+        "form_message": "Tin nhắn",
+        "form_button": "Gửi",
+        "form_success": "Cảm ơn bạn. Tin nhắn đã được gửi trong bản thử nghiệm này.",
+        "footer": "Trang web nguyên mẫu được xây dựng bằng Streamlit.",
+        "key_elements": "Các yếu tố chính",
+        "why_matters": "Tại sao điều này quan trọng",
     }
 }
 
