@@ -61,7 +61,7 @@ language = st.sidebar.selectbox("Language", ["English", "한국어", "Русск
 # -----------------------------
 content = {
     "English": {
-        "hero_title": "Re:Her",
+        "hero_title": "Her Story",
         "hero_subtitle": "A supportive digital space for migrant women in Korea",
         "hero_text": (
             "Re:Her is designed to support emotional well-being, reflection, and "
