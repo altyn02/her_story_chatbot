@@ -32,7 +32,7 @@ st.markdown(
         align-items: center;
         gap: 0.8rem;
     }
-    .chatbot-icon {
+    .-icon {
         width: 100px;
         height: 100px;
         border-radius: 16px;
@@ -398,71 +398,71 @@ if page == T["nav"][0]:
     )
     CHATBOT_URL = "https://claude.ai/public/artifacts/b41dd0b5-9521-4854-bf05-14ac487c5b5b"
 
-st.markdown(
-    f"""
-    <style>
-    .chatbot-card-wrap {{
-        display:flex;
-        justify-content:center;
-        margin-top:30px;
-        margin-bottom:30px;
-    }}
-
-    .chatbot-card {{
-        position:relative;
-        width:420px;
-        background:#fff6fb;
-        border:1px solid #f3d7e6;
-        border-radius:24px;
-        padding:28px;
-        text-decoration:none;
-        color:#4b2e3f;
-        box-shadow:0 12px 30px rgba(240,170,205,0.25);
-        transition:0.2s;
-    }}
-
-    .chatbot-card:hover {{
-        transform:translateY(-4px);
-    }}
-
-    .chatbot-title {{
-        font-size:1.4rem;
-        font-weight:700;
-        margin-bottom:6px;
-    }}
-
-    .chatbot-desc {{
-        font-size:0.95rem;
-        color:#6e5261;
-    }}
-
-    .click-pointer {{
-        position:absolute;
-        right:18px;
-        bottom:18px;
-        font-size:1.9rem;
-        animation:bounceClick 1.2s infinite;
-    }}
-
-    @keyframes bounceClick {{
-        0% {{ transform:translateY(0); }}
-        50% {{ transform:translateY(-10px); }}
-        100% {{ transform:translateY(0); }}
-    }}
-    </style>
-
-    <div class="chatbot-card-wrap">
-        <a class="chatbot-card" href="{CHATBOT_URL}" target="_blank">
-            <div class="chatbot-title">🤖 Re:Her Chatbot</div>
-            <div class="chatbot-desc">
-            Click here to open the interactive chatbot experience.
-            </div>
-            <div class="click-pointer">👆</div>
-        </a>
-    </div>
-    """,
-    unsafe_allow_html=True,
-)
+    st.markdown(
+        f"""
+        <style>
+        .chatbot-card-wrap {{
+            display:flex;
+            justify-content:center;
+            margin-top:30px;
+            margin-bottom:30px;
+        }}
+    
+        .chatbot-card {{
+            position:relative;
+            width:420px;
+            background:#fff6fb;
+            border:1px solid #f3d7e6;
+            border-radius:24px;
+            padding:28px;
+            text-decoration:none;
+            color:#4b2e3f;
+            box-shadow:0 12px 30px rgba(240,170,205,0.25);
+            transition:0.2s;
+        }}
+    
+        .chatbot-card:hover {{
+            transform:translateY(-4px);
+        }}
+    
+        .chatbot-title {{
+            font-size:1.4rem;
+            font-weight:700;
+            margin-bottom:6px;
+        }}
+    
+        .chatbot-desc {{
+            font-size:0.95rem;
+            color:#6e5261;
+        }}
+    
+        .click-pointer {{
+            position:absolute;
+            right:18px;
+            bottom:18px;
+            font-size:1.9rem;
+            animation:bounceClick 1.2s infinite;
+        }}
+    
+        @keyframes bounceClick {{
+            0% {{ transform:translateY(0); }}
+            50% {{ transform:translateY(-10px); }}
+            100% {{ transform:translateY(0); }}
+        }}
+        </style>
+    
+        <div class="chatbot-card-wrap">
+            <a class="chatbot-card" href="{CHATBOT_URL}" target="_blank">
+                <div class="chatbot-title">🤖 Re:Her Chatbot</div>
+                <div class="chatbot-desc">
+                Click here to open the interactive chatbot experience.
+                </div>
+                <div class="click-pointer">👆</div>
+            </a>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
 
     col1, col2 = st.columns(2)
     with col1:
