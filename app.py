@@ -13,13 +13,13 @@ st.set_page_config(
 # -----------------------------
 # Styling
 # -----------------------------
-
 st.markdown(
     """
     <style>
     .stApp {
         background: linear-gradient(180deg, #fff8fb 0%, #fffdfd 100%);
     }
+
     .topbar {
         display: flex;
         justify-content: space-between;
@@ -27,12 +27,14 @@ st.markdown(
         margin-bottom: 1.2rem;
         padding: 0.4rem 0 0.8rem 0;
     }
+
     .brand-wrap {
         display: flex;
         align-items: center;
         gap: 0.8rem;
     }
-    .-icon {
+
+    .chatbot-icon {
         width: 100px;
         height: 100px;
         border-radius: 16px;
@@ -43,17 +45,20 @@ st.markdown(
         font-size: 2.7rem;
         box-shadow: 0 8px 24px rgba(255, 165, 204, 0.25);
     }
+
     .brand-title {
         font-size: 2rem;
         font-weight: 700;
         color: #5c3451;
         margin: 0;
     }
+
     .brand-sub {
         font-size: 0.98rem;
         color: #8a627b;
         margin: 0.15rem 0 0 0;
     }
+
     .hero {
         padding: 3rem 2rem;
         border-radius: 26px;
@@ -62,6 +67,7 @@ st.markdown(
         border: 1px solid #f8d6e5;
         box-shadow: 0 10px 30px rgba(240, 170, 205, 0.15);
     }
+
     .card {
         padding: 1.2rem;
         border-radius: 18px;
@@ -70,6 +76,7 @@ st.markdown(
         min-height: 220px;
         box-shadow: 0 6px 20px rgba(240, 170, 205, 0.08);
     }
+
     .soft-box {
         padding: 1rem 1.2rem;
         border-radius: 16px;
@@ -78,12 +85,62 @@ st.markdown(
         margin-top: 1rem;
         margin-bottom: 1rem;
     }
+
     .footer {
         text-align: center;
         color: #8b6a7d;
         font-size: 0.9rem;
         padding-top: 2rem;
         padding-bottom: 1rem;
+    }
+
+    .chatbot-card-wrap {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .chatbot-card {
+        position: relative;
+        width: 420px;
+        background: #fff6fb;
+        border: 1px solid #f3d7e6;
+        border-radius: 24px;
+        padding: 28px;
+        text-decoration: none;
+        color: #4b2e3f;
+        box-shadow: 0 12px 30px rgba(240,170,205,0.25);
+        transition: 0.2s;
+    }
+
+    .chatbot-card:hover {
+        transform: translateY(-4px);
+    }
+
+    .chatbot-title {
+        font-size: 1.4rem;
+        font-weight: 700;
+        margin-bottom: 6px;
+    }
+
+    .chatbot-desc {
+        font-size: 0.95rem;
+        color: #6e5261;
+    }
+
+    .click-pointer {
+        position: absolute;
+        right: 18px;
+        bottom: 18px;
+        font-size: 1.9rem;
+        animation: bounceClick 1.2s infinite;
+    }
+
+    @keyframes bounceClick {
+        0% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+        100% { transform: translateY(0); }
     }
     </style>
     """,
@@ -96,7 +153,7 @@ st.markdown(
 content = {
     "English": {
         "nav": ["Home", "About", "Our Service", "Target Users", "Future Vision", "Contact"],
-        "hero_title": "🌸Her Story🌸",
+        "hero_title": "🌸 Her Story 🌸",
         "hero_subtitle": "A supportive digital space for migrant women in Korea",
         "hero_text": (
             "Her Story is designed to support emotional well-being, reflection, and "
@@ -109,11 +166,12 @@ content = {
             ("Reflection and Guidance", "The service is designed to support emotional expression, self-reflection, and practical guidance."),
             ("Accessible Experience", "A calm and welcoming interface helps users feel supported and included."),
         ],
-        "about_title": "About 🌸Her Story🌸",
+        "about_title": "About Her Story",
         "about_text": (
             "Her Story is a concept service created to support migrant and marriage migrant women living in South Korea. "
             "The project focuses on emotional support, self-expression, and accessible guidance."
         ),
+        "about_note": "Her Story is designed around accessibility, emotional support, and inclusion.",
         "service_title": "Our Service",
         "service_text": (
             "The service is planned as a multilingual digital support platform. "
@@ -137,6 +195,7 @@ content = {
         "form_message": "Message",
         "form_button": "Submit",
         "form_success": "Thank you. Your message was saved successfully.",
+        "form_warning": "Please fill in all fields.",
         "footer": "Prototype website built with Streamlit.",
         "key_elements": "Key Elements",
         "why_matters": "Why It Matters",
@@ -155,10 +214,13 @@ content = {
         ],
         "concept_stage": "Concept development stage",
         "brand_sub": "A gentle, multilingual support concept",
+        "chatbot_title": "🤖 Re:Her Chatbot",
+        "chatbot_desc": "Click here to open the interactive chatbot experience.",
+        "image_caption": "Supporting migrant and marriage migrant women in Korea",
     },
     "한국어": {
         "nav": ["홈", "소개", "서비스", "대상 사용자", "향후 비전", "문의"],
-        "hero_title": "🌸Her Story🌸",
+        "hero_title": "🌸 Her Story 🌸",
         "hero_subtitle": "한국에 거주하는 이주여성을 위한 따뜻한 디지털 공간",
         "hero_text": (
             "Her Story는 다국어 기반의 사용자 친화적인 디지털 서비스를 통해 "
@@ -171,11 +233,12 @@ content = {
             ("성찰과 가이드", "감정 표현, 자기 성찰, 그리고 실질적인 안내를 지원하도록 설계되었습니다."),
             ("접근성 중심 경험", "차분하고 따뜻한 인터페이스를 통해 사용자가 안전함과 편안함을 느낄 수 있습니다."),
         ],
-        "about_title": "🌸Her Story🌸 소개",
+        "about_title": "Her Story 소개",
         "about_text": (
             "Her Story는 한국에 거주하는 결혼이주여성과 이주여성을 지원하기 위해 기획된 서비스입니다. "
             "이 프로젝트는 정서적 지원, 자기표현, 그리고 실질적인 안내에 더 쉽게 접근할 수 있도록 하는 데 초점을 둡니다."
         ),
+        "about_note": "Her Story는 접근성, 정서적 지원, 그리고 포용성을 중심으로 설계되었습니다.",
         "service_title": "서비스 소개",
         "service_text": (
             "이 서비스는 다국어 디지털 지원 플랫폼으로 기획되었습니다. "
@@ -198,6 +261,7 @@ content = {
         "form_message": "메시지",
         "form_button": "제출",
         "form_success": "감사합니다. 메시지가 저장되었습니다.",
+        "form_warning": "모든 항목을 입력해 주세요.",
         "footer": "Streamlit으로 제작한 프로토타입 웹사이트입니다.",
         "key_elements": "핵심 요소",
         "why_matters": "이 서비스가 중요한 이유",
@@ -206,10 +270,13 @@ content = {
         "why_items": ["장벽 감소", "자기 표현 지원", "정보 접근성 향상", "환영받는 디지털 경험 제공"],
         "concept_stage": "개념 개발 단계",
         "brand_sub": "따뜻한 다국어 지원 서비스 컨셉",
+        "chatbot_title": "🤖 Re:Her 챗봇",
+        "chatbot_desc": "클릭하여 대화형 챗봇 경험을 시작하세요.",
+        "image_caption": "한국의 이주여성과 결혼이주여성을 위한 지원",
     },
     "Русский": {
         "nav": ["Главная", "О проекте", "Наш сервис", "Для кого", "Будущее", "Контакты"],
-        "hero_title": "🌸Her Story🌸",
+        "hero_title": "🌸 Her Story 🌸",
         "hero_subtitle": "Поддерживающее цифровое пространство для мигранток в Корее",
         "hero_text": (
             "Her Story создан как многоязычный и удобный цифровой сервис, "
@@ -227,6 +294,7 @@ content = {
             "Her Story — это концепция сервиса, созданного для поддержки мигранток и женщин в брачной миграции, "
             "живущих в Южной Корее. Проект фокусируется на эмоциональной поддержке, самовыражении и доступной помощи."
         ),
+        "about_note": "Her Story создан с акцентом на доступность, эмоциональную поддержку и инклюзивность.",
         "service_title": "Наш сервис",
         "service_text": (
             "Сервис задуман как многоязычная цифровая платформа поддержки. "
@@ -251,6 +319,7 @@ content = {
         "form_message": "Сообщение",
         "form_button": "Отправить",
         "form_success": "Спасибо. Сообщение успешно сохранено.",
+        "form_warning": "Пожалуйста, заполните все поля.",
         "footer": "Прототип сайта, созданный на Streamlit.",
         "key_elements": "Ключевые элементы",
         "why_matters": "Почему это важно",
@@ -269,10 +338,13 @@ content = {
         ],
         "concept_stage": "Стадия разработки концепции",
         "brand_sub": "Мягкая многоязычная концепция поддержки",
+        "chatbot_title": "🤖 Re:Her Чатбот",
+        "chatbot_desc": "Нажмите здесь, чтобы открыть интерактивный чатбот.",
+        "image_caption": "Поддержка мигранток и женщин в брачной миграции в Корее",
     },
     "Tiếng Việt": {
         "nav": ["Trang chủ", "Giới thiệu", "Dịch vụ", "Người dùng", "Tầm nhìn", "Liên hệ"],
-        "hero_title": "🌸Her Story🌸",
+        "hero_title": "🌸 Her Story 🌸",
         "hero_subtitle": "Không gian kỹ thuật số hỗ trợ phụ nữ nhập cư tại Hàn Quốc",
         "hero_text": (
             "Her Story được thiết kế như một dịch vụ kỹ thuật số đa ngôn ngữ "
@@ -292,6 +364,7 @@ content = {
             "Dự án tập trung vào hỗ trợ cảm xúc, khả năng thể hiện bản thân "
             "và tiếp cận thông tin hữu ích dễ dàng hơn."
         ),
+        "about_note": "Her Story được thiết kế dựa trên khả năng tiếp cận, hỗ trợ cảm xúc và tính bao trùm.",
         "service_title": "Dịch vụ của chúng tôi",
         "service_text": (
             "Dịch vụ được thiết kế như một nền tảng hỗ trợ kỹ thuật số đa ngôn ngữ. "
@@ -317,6 +390,7 @@ content = {
         "form_message": "Tin nhắn",
         "form_button": "Gửi",
         "form_success": "Cảm ơn bạn. Tin nhắn đã được lưu thành công.",
+        "form_warning": "Vui lòng điền đầy đủ tất cả các trường.",
         "footer": "Trang web nguyên mẫu được xây dựng bằng Streamlit.",
         "key_elements": "Các yếu tố chính",
         "why_matters": "Tại sao điều này quan trọng",
@@ -335,6 +409,9 @@ content = {
         ],
         "concept_stage": "Giai đoạn phát triển ý tưởng",
         "brand_sub": "Một ý tưởng hỗ trợ đa ngôn ngữ nhẹ nhàng",
+        "chatbot_title": "🤖 Chatbot Re:Her",
+        "chatbot_desc": "Nhấn vào đây để mở trải nghiệm chatbot tương tác.",
+        "image_caption": "Hỗ trợ phụ nữ nhập cư và phụ nữ kết hôn với người Hàn tại Hàn Quốc",
     },
 }
 
@@ -348,73 +425,20 @@ with col2:
 T = content[language]
 page = st.radio("", T["nav"], horizontal=True)
 
-CHATBOT_URL = "https://claude.ai/public/artifacts/b41dd0b5-9521-4854-bf05-14ac487c5b5b"
 st.markdown(
-        f"""
-        <style>
-        .chatbot-card-wrap {{
-            display:flex;
-            justify-content:center;
-            margin-top:30px;
-            margin-bottom:30px;
-        }}
-    
-        .chatbot-card {{
-            position:relative;
-            width:420px;
-            background:#fff6fb;
-            border:1px solid #f3d7e6;
-            border-radius:24px;
-            padding:28px;
-            text-decoration:none;
-            color:#4b2e3f;
-            box-shadow:0 12px 30px rgba(240,170,205,0.25);
-            transition:0.2s;
-        }}
-    
-        .chatbot-card:hover {{
-            transform:translateY(-4px);
-        }}
-    
-        .chatbot-title {{
-            font-size:1.4rem;
-            font-weight:700;
-            margin-bottom:6px;
-        }}
-    
-        .chatbot-desc {{
-            font-size:0.95rem;
-            color:#6e5261;
-        }}
-    
-        .click-pointer {{
-            position:absolute;
-            right:18px;
-            bottom:18px;
-            font-size:1.9rem;
-            animation:bounceClick 1.2s infinite;
-        }}
-    
-        @keyframes bounceClick {{
-            0% {{ transform:translateY(0); }}
-            50% {{ transform:translateY(-10px); }}
-            100% {{ transform:translateY(0); }}
-        }}
-        </style>
-    
-        <div class="chatbot-card-wrap">
-            <a class="chatbot-card" href="{CHATBOT_URL}" target="_blank">
-                <div class="chatbot-title">🤖 Re:Her Chatbot</div>
-                <div class="chatbot-desc">
-                Click here to open the interactive chatbot experience.
-                </div>
-                <div class="click-pointer">👆</div>
-            </a>
+    f"""
+    <div class="topbar">
+        <div class="brand-wrap">
+            <div class="chatbot-icon">🤖</div>
+            <div>
+                <p class="brand-title">🌸 Her Story</p>
+                <p class="brand-sub">{T['brand_sub']}</p>
+            </div>
         </div>
-        """,
-        unsafe_allow_html=True,
-    )
-
+    </div>
+    """,
+    unsafe_allow_html=True,
+)
 
 # -----------------------------
 # Save contact submissions
@@ -450,6 +474,20 @@ if page == T["nav"][0]:
         unsafe_allow_html=True,
     )
 
+    CHATBOT_URL = "https://claude.ai/public/artifacts/b41dd0b5-9521-4854-bf05-14ac487c5b5b"
+
+    st.markdown(
+        f"""
+        <div class="chatbot-card-wrap">
+            <a class="chatbot-card" href="{CHATBOT_URL}" target="_blank">
+                <div class="chatbot-title">{T['chatbot_title']}</div>
+                <div class="chatbot-desc">{T['chatbot_desc']}</div>
+                <div class="click-pointer">👆</div>
+            </a>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
 
     col1, col2 = st.columns(2)
     with col1:
@@ -474,8 +512,8 @@ if page == T["nav"][0]:
     st.write("")
     st.image(
         "image/migrant_women_korea.jpg",
-        caption="Supporting migrant and marriage migrant women in Korea",
-        use_container_width=True
+        caption=T["image_caption"],
+        use_container_width=True,
     )
 
 elif page == T["nav"][1]:
@@ -484,7 +522,7 @@ elif page == T["nav"][1]:
     st.markdown(
         f"""
         <div class="soft-box">
-        {T['hero_title']} is designed around accessibility, emotional support, and inclusion.
+        {T["about_note"]}
         </div>
         """,
         unsafe_allow_html=True,
@@ -531,6 +569,6 @@ elif page == T["nav"][5]:
                 save_contact(name, email, message, language)
                 st.success(T["form_success"])
             else:
-                st.warning("Please fill in all fields.")
+                st.warning(T["form_warning"])
 
 st.markdown(f"<div class='footer'>{T['footer']}</div>", unsafe_allow_html=True)
