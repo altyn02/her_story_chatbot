@@ -1,5 +1,6 @@
 import csv
 import os
+import textwrap
 from datetime import datetime
 
 import streamlit as st
@@ -20,45 +21,6 @@ st.markdown(
         background: linear-gradient(180deg, #fff8fb 0%, #fffdfd 100%);
     }
 
-    .topbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 1.2rem;
-        padding: 0.4rem 0 0.8rem 0;
-    }
-
-    .brand-wrap {
-        display: flex;
-        align-items: center;
-        gap: 0.8rem;
-    }
-
-    .chatbot-icon {
-        width: 100px;
-        height: 100px;
-        border-radius: 16px;
-        background: linear-gradient(135deg, #ffb7d5 0%, #f4c7ff 100%);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 2.7rem;
-        box-shadow: 0 8px 24px rgba(255, 165, 204, 0.25);
-    }
-
-    .brand-title {
-        font-size: 2rem;
-        font-weight: 700;
-        color: #5c3451;
-        margin: 0;
-    }
-
-    .brand-sub {
-        font-size: 0.98rem;
-        color: #8a627b;
-        margin: 0.15rem 0 0 0;
-    }
-
     .hero {
         padding: 2.2rem 2rem 3rem 2rem;
         border-radius: 26px;
@@ -71,7 +33,7 @@ st.markdown(
     .hero-title {
         margin-top: 1.2rem;
         margin-bottom: 0.6rem;
-        font-size: 3.2rem;
+        font-size: 3rem;
         font-weight: 800;
         color: #313545;
     }
@@ -236,7 +198,6 @@ content = {
             "Creates a welcoming digital experience",
         ],
         "concept_stage": "Concept development stage",
-        "brand_sub": "A gentle, multilingual support concept",
         "chatbot_title": "🤖 Re:Her Chatbot",
         "chatbot_desc": "Click here to open the interactive chatbot experience.",
         "image_caption": "Supporting migrant and marriage migrant women in Korea",
@@ -292,7 +253,6 @@ content = {
         "key_elements_items": ["성찰 지원", "다국어 접근성", "부드러운 안내", "향후 AI 기반 기능"],
         "why_items": ["장벽 감소", "자기 표현 지원", "정보 접근성 향상", "환영받는 디지털 경험 제공"],
         "concept_stage": "개념 개발 단계",
-        "brand_sub": "따뜻한 다국어 지원 서비스 컨셉",
         "chatbot_title": "🤖 Re:Her 챗봇",
         "chatbot_desc": "클릭하여 대화형 챗봇 경험을 시작하세요.",
         "image_caption": "한국의 이주여성과 결혼이주여성을 위한 지원",
@@ -360,7 +320,6 @@ content = {
             "Создание дружелюбного цифрового пространства",
         ],
         "concept_stage": "Стадия разработки концепции",
-        "brand_sub": "Мягкая многоязычная концепция поддержки",
         "chatbot_title": "🤖 Re:Her Чатбот",
         "chatbot_desc": "Нажмите здесь, чтобы открыть интерактивный чатбот.",
         "image_caption": "Поддержка мигранток и женщин в брачной миграции в Корее",
@@ -431,7 +390,6 @@ content = {
             "Tạo trải nghiệm kỹ thuật số thân thiện",
         ],
         "concept_stage": "Giai đoạn phát triển ý tưởng",
-        "brand_sub": "Một ý tưởng hỗ trợ đa ngôn ngữ nhẹ nhàng",
         "chatbot_title": "🤖 Chatbot Re:Her",
         "chatbot_desc": "Nhấn vào đây để mở trải nghiệm chatbot tương tác.",
         "image_caption": "Hỗ trợ phụ nữ nhập cư và phụ nữ kết hôn với người Hàn tại Hàn Quốc",
@@ -439,7 +397,7 @@ content = {
 }
 
 # -----------------------------
-# Top bar
+# Top controls
 # -----------------------------
 col1, col2 = st.columns([7, 1])
 with col2:
@@ -447,21 +405,6 @@ with col2:
 
 T = content[language]
 page = st.radio("", T["nav"], horizontal=True)
-
-st.markdown(
-    f"""
-    <div class="topbar">
-        <div class="brand-wrap">
-            <div class="chatbot-icon">🤖</div>
-            <div>
-                <p class="brand-title">🌸 Her Story</p>
-                <p class="brand-sub">{T['brand_sub']}</p>
-            </div>
-        </div>
-    </div>
-    """,
-    unsafe_allow_html=True,
-)
 
 # -----------------------------
 # Save contact submissions
@@ -498,26 +441,24 @@ def show_main_image():
 # Pages
 # -----------------------------
 if page == T["nav"][0]:
-    CHATBOT_URL = "https://claude.ai/public/artifacts/b41dd0b5-9521-4854-bf05-14ac487c5b5b"
+    chatbot_url = "https://claude.ai/public/artifacts/b41dd0b5-9521-4854-bf05-14ac487c5b5b"
 
-    st.markdown(
-        f"""
-        <div class="hero">
-            <div class="chatbot-card-wrap">
-                <a class="chatbot-card" href="{CHATBOT_URL}" target="_blank">
-                    <div class="chatbot-title">{T['chatbot_title']}</div>
-                    <div class="chatbot-desc">{T['chatbot_desc']}</div>
-                    <div class="click-pointer">👆</div>
-                </a>
-            </div>
-
-            <div class="hero-title">{T['hero_title']}</div>
-            <div class="hero-subtitle">{T['hero_subtitle']}</div>
-            <div class="hero-text">{T['hero_text']}</div>
+    hero_html = textwrap.dedent(f"""
+    <div class="hero">
+        <div class="chatbot-card-wrap">
+            <a class="chatbot-card" href="{chatbot_url}" target="_blank">
+                <div class="chatbot-title">{T['chatbot_title']}</div>
+                <div class="chatbot-desc">{T['chatbot_desc']}</div>
+                <div class="click-pointer">👆</div>
+            </a>
         </div>
-        """,
-        unsafe_allow_html=True,
-    )
+
+        <div class="hero-title">{T['hero_title']}</div>
+        <div class="hero-subtitle">{T['hero_subtitle']}</div>
+        <div class="hero-text">{T['hero_text']}</div>
+    </div>
+    """)
+    st.markdown(hero_html, unsafe_allow_html=True)
 
     col1, col2 = st.columns(2)
     with col1:
