@@ -349,8 +349,7 @@ T = content[language]
 page = st.radio("", T["nav"], horizontal=True)
 
 CHATBOT_URL = "https://claude.ai/public/artifacts/b41dd0b5-9521-4854-bf05-14ac487c5b5b"
-
-    st.markdown(
+st.markdown(
         f"""
         <style>
         .chatbot-card-wrap {{
@@ -415,6 +414,7 @@ CHATBOT_URL = "https://claude.ai/public/artifacts/b41dd0b5-9521-4854-bf05-14ac48
         """,
         unsafe_allow_html=True,
     )
+
 
 # -----------------------------
 # Save contact submissions
