@@ -2,6 +2,7 @@ import csv
 import os
 import textwrap
 from datetime import datetime
+import textwrap
 
 import streamlit as st
 
@@ -458,6 +459,7 @@ if page == T["nav"][0]:
         <div class="hero-text">{T['hero_text']}</div>
     </div>
     """)
+
     st.markdown(hero_html, unsafe_allow_html=True)
 
     col1, col2 = st.columns(2)
