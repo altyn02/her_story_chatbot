@@ -32,8 +32,8 @@ st.markdown(
         gap: 0.8rem;
     }
     .chatbot-icon {
-        width: 54px;
-        height: 54px;
+        width: 100px;
+        height: 100px;
         border-radius: 16px;
         background: linear-gradient(135deg, #ffb7d5 0%, #f4c7ff 100%);
         display: flex;
@@ -95,10 +95,10 @@ st.markdown(
 content = {
     "English": {
         "nav": ["Home", "About", "Our Service", "Target Users", "Future Vision", "Contact"],
-        "hero_title": "Her Story",
+        "hero_title": "🌸Her Story🌸",
         "hero_subtitle": "A supportive digital space for migrant women in Korea",
         "hero_text": (
-            "Her Story is designed to support emotional well-being, reflection, and "
+            "🌸Her Story🌸 is designed to support emotional well-being, reflection, and "
             "easier access to guidance through a multilingual and user-friendly digital service."
         ),
         "button_1": "Explore Our Service",
@@ -108,9 +108,9 @@ content = {
             ("Reflection and Guidance", "The service is designed to support emotional expression, self-reflection, and practical guidance."),
             ("Accessible Experience", "A calm and welcoming interface helps users feel supported and included."),
         ],
-        "about_title": "About Her Story",
+        "about_title": "About 🌸Her Story🌸",
         "about_text": (
-            "Her Story is a concept service created to support migrant and marriage migrant women living in South Korea. "
+            "🌸Her Story🌸 is a concept service created to support migrant and marriage migrant women living in South Korea. "
             "The project focuses on emotional support, self-expression, and accessible guidance."
         ),
         "service_title": "Our Service",
@@ -126,11 +126,11 @@ content = {
         ),
         "future_title": "Future Vision",
         "future_text": (
-            "In the future, Her Story can grow into a more interactive platform with personalized guidance, "
+            "In the future, 🌸Her Story🌸 can grow into a more interactive platform with personalized guidance, "
             "community resources, multilingual content, and AI-supported reflection tools."
         ),
         "contact_title": "Contact",
-        "contact_text": "For collaboration, pilot testing, or project inquiries, please contact the Her Story team.",
+        "contact_text": "For collaboration, pilot testing, or project inquiries, please contact the 🌸Her Story🌸 team.",
         "form_name": "Name",
         "form_email": "Email",
         "form_message": "Message",
@@ -157,10 +157,10 @@ content = {
     },
     "한국어": {
         "nav": ["홈", "소개", "서비스", "대상 사용자", "향후 비전", "문의"],
-        "hero_title": "Her Story",
+        "hero_title": "🌸Her Story🌸",
         "hero_subtitle": "한국에 거주하는 이주여성을 위한 따뜻한 디지털 공간",
         "hero_text": (
-            "Her Story는 다국어 기반의 사용자 친화적인 디지털 서비스를 통해 "
+            "🌸Her Story🌸는 다국어 기반의 사용자 친화적인 디지털 서비스를 통해 "
             "정서적 지원, 자기성찰, 그리고 유용한 정보 접근을 돕는 것을 목표로 합니다."
         ),
         "button_1": "서비스 보기",
@@ -170,9 +170,9 @@ content = {
             ("성찰과 가이드", "감정 표현, 자기 성찰, 그리고 실질적인 안내를 지원하도록 설계되었습니다."),
             ("접근성 중심 경험", "차분하고 따뜻한 인터페이스를 통해 사용자가 안전함과 편안함을 느낄 수 있습니다."),
         ],
-        "about_title": "Her Story 소개",
+        "about_title": "🌸Her Story🌸 소개",
         "about_text": (
-            "Her Story는 한국에 거주하는 결혼이주여성과 이주여성을 지원하기 위해 기획된 서비스입니다. "
+            "🌸Her Story🌸는 한국에 거주하는 결혼이주여성과 이주여성을 지원하기 위해 기획된 서비스입니다. "
             "이 프로젝트는 정서적 지원, 자기표현, 그리고 실질적인 안내에 더 쉽게 접근할 수 있도록 하는 데 초점을 둡니다."
         ),
         "service_title": "서비스 소개",
@@ -187,11 +187,11 @@ content = {
         ),
         "future_title": "향후 비전",
         "future_text": (
-            "향후 Her Story는 개인 맞춤형 안내, 지역사회 자원, 다국어 콘텐츠, "
+            "향후 🌸Her Story🌸는 개인 맞춤형 안내, 지역사회 자원, 다국어 콘텐츠, "
             "AI 기반 성찰 도구를 포함한 더 확장된 플랫폼으로 발전할 수 있습니다."
         ),
         "contact_title": "문의",
-        "contact_text": "협업, 파일럿 테스트 또는 프로젝트 문의는 Her Story 팀에 연락해 주세요.",
+        "contact_text": "협업, 파일럿 테스트 또는 프로젝트 문의는 🌸Her Story🌸 팀에 연락해 주세요.",
         "form_name": "이름",
         "form_email": "이메일",
         "form_message": "메시지",
@@ -208,10 +208,10 @@ content = {
     },
     "Русский": {
         "nav": ["Главная", "О проекте", "Наш сервис", "Для кого", "Будущее", "Контакты"],
-        "hero_title": "Her Story",
+        "hero_title": "🌸Her Story🌸",
         "hero_subtitle": "Поддерживающее цифровое пространство для мигранток в Корее",
         "hero_text": (
-            "Her Story создан как многоязычный и удобный цифровой сервис, "
+            "🌸Her Story🌸 создан как многоязычный и удобный цифровой сервис, "
             "который помогает с эмоциональной поддержкой, рефлексией и доступом к полезной информации."
         ),
         "button_1": "О сервисе",
@@ -221,9 +221,9 @@ content = {
             ("Рефлексия и поддержка", "Сервис помогает с эмоциональным выражением, саморефлексией и практической поддержкой."),
             ("Удобный интерфейс", "Спокойный и дружелюбный интерфейс помогает чувствовать себя безопасно и комфортно."),
         ],
-        "about_title": "О проекте Her Story",
+        "about_title": "О проекте 🌸Her Story🌸",
         "about_text": (
-            "Her Story — это концепция сервиса, созданного для поддержки мигранток и женщин в брачной миграции, "
+            "🌸Her Story🌸 — это концепция сервиса, созданного для поддержки мигранток и женщин в брачной миграции, "
             "живущих в Южной Корее. Проект фокусируется на эмоциональной поддержке, самовыражении и доступной помощи."
         ),
         "service_title": "Наш сервис",
@@ -240,11 +240,11 @@ content = {
         ),
         "future_title": "Будущее развитие",
         "future_text": (
-            "В будущем Her Story может вырасти в более интерактивную платформу с персонализированной поддержкой, "
+            "В будущем 🌸Her Story🌸 может вырасти в более интерактивную платформу с персонализированной поддержкой, "
             "полезными ресурсами сообщества, многоязычным контентом и AI-инструментами для рефлексии."
         ),
         "contact_title": "Контакты",
-        "contact_text": "По вопросам сотрудничества, пилотного тестирования или проекта свяжитесь с командой Her Story.",
+        "contact_text": "По вопросам сотрудничества, пилотного тестирования или проекта свяжитесь с командой 🌸Her Story🌸.",
         "form_name": "Имя",
         "form_email": "Email",
         "form_message": "Сообщение",
@@ -271,10 +271,10 @@ content = {
     },
     "Tiếng Việt": {
         "nav": ["Trang chủ", "Giới thiệu", "Dịch vụ", "Người dùng", "Tầm nhìn", "Liên hệ"],
-        "hero_title": "Her Story",
+        "hero_title": "🌸Her Story🌸",
         "hero_subtitle": "Không gian kỹ thuật số hỗ trợ phụ nữ nhập cư tại Hàn Quốc",
         "hero_text": (
-            "Her Story được thiết kế như một dịch vụ kỹ thuật số đa ngôn ngữ "
+            "🌸Her Story🌸 được thiết kế như một dịch vụ kỹ thuật số đa ngôn ngữ "
             "nhằm hỗ trợ sức khỏe tinh thần, sự tự phản ánh và giúp tiếp cận thông tin dễ dàng hơn."
         ),
         "button_1": "Khám phá dịch vụ",
@@ -284,9 +284,9 @@ content = {
             ("Tự phản ánh và hỗ trợ", "Dịch vụ giúp người dùng thể hiện cảm xúc, suy ngẫm về bản thân và nhận được hướng dẫn thực tế."),
             ("Trải nghiệm thân thiện", "Giao diện đơn giản và nhẹ nhàng giúp người dùng cảm thấy an toàn và được chào đón."),
         ],
-        "about_title": "Giới thiệu về Her Story",
+        "about_title": "Giới thiệu về 🌸Her Story🌸",
         "about_text": (
-            "Her Story là một ý tưởng dịch vụ được tạo ra để hỗ trợ phụ nữ nhập cư "
+            "🌸Her Story🌸 là một ý tưởng dịch vụ được tạo ra để hỗ trợ phụ nữ nhập cư "
             "và phụ nữ kết hôn với người Hàn đang sống tại Hàn Quốc. "
             "Dự án tập trung vào hỗ trợ cảm xúc, khả năng thể hiện bản thân "
             "và tiếp cận thông tin hữu ích dễ dàng hơn."
@@ -305,12 +305,12 @@ content = {
         ),
         "future_title": "Tầm nhìn tương lai",
         "future_text": (
-            "Trong tương lai, Her Story có thể phát triển thành một nền tảng tương tác hơn "
+            "Trong tương lai, 🌸Her Story🌸 có thể phát triển thành một nền tảng tương tác hơn "
             "với hướng dẫn cá nhân hóa, tài nguyên cộng đồng, nội dung đa ngôn ngữ "
             "và các công cụ AI hỗ trợ tự phản ánh."
         ),
         "contact_title": "Liên hệ",
-        "contact_text": "Để hợp tác, thử nghiệm dự án hoặc tìm hiểu thêm, vui lòng liên hệ với nhóm Her Story.",
+        "contact_text": "Để hợp tác, thử nghiệm dự án hoặc tìm hiểu thêm, vui lòng liên hệ với nhóm 🌸Her Story🌸.",
         "form_name": "Tên",
         "form_email": "Email",
         "form_message": "Tin nhắn",
@@ -353,7 +353,7 @@ st.markdown(
         <div class="brand-wrap">
             <div class="chatbot-icon">🤖</div>
             <div>
-                <p class="brand-title">Her Story</p>
+                <p class="brand-title">🌸Her Story🌸</p>
                 <p class="brand-sub">{T['brand_sub']}</p>
             </div>
         </div>
