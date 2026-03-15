@@ -60,12 +60,33 @@ st.markdown(
     }
 
     .hero {
-        padding: 3rem 2rem;
+        padding: 2.2rem 2rem 3rem 2rem;
         border-radius: 26px;
         background: linear-gradient(135deg, #ffe4ef 0%, #fdf1ff 55%, #fff8fb 100%);
         margin-bottom: 2rem;
         border: 1px solid #f8d6e5;
         box-shadow: 0 10px 30px rgba(240, 170, 205, 0.15);
+    }
+
+    .hero-title {
+        margin-top: 1.2rem;
+        margin-bottom: 0.6rem;
+        font-size: 3.2rem;
+        font-weight: 800;
+        color: #313545;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: #313545;
+        margin-bottom: 1rem;
+    }
+
+    .hero-text {
+        font-size: 1.05rem;
+        color: #4b4654;
+        line-height: 1.7;
     }
 
     .card {
@@ -96,21 +117,21 @@ st.markdown(
 
     .chatbot-card-wrap {
         display: flex;
-        justify-content: center;
-        margin-top: 30px;
-        margin-bottom: 30px;
+        justify-content: flex-start;
+        margin-top: 0;
+        margin-bottom: 1.4rem;
     }
 
     .chatbot-card {
         position: relative;
-        width: 420px;
+        width: 430px;
         background: #fff6fb;
         border: 1px solid #f3d7e6;
         border-radius: 24px;
-        padding: 28px;
+        padding: 22px 24px;
         text-decoration: none;
         color: #4b2e3f;
-        box-shadow: 0 12px 30px rgba(240,170,205,0.25);
+        box-shadow: 0 12px 30px rgba(240,170,205,0.20);
         transition: 0.2s;
     }
 
@@ -119,20 +140,22 @@ st.markdown(
     }
 
     .chatbot-title {
-        font-size: 1.4rem;
+        font-size: 1.25rem;
         font-weight: 700;
-        margin-bottom: 6px;
+        margin-bottom: 8px;
+        color: #8b2f66;
     }
 
     .chatbot-desc {
-        font-size: 0.95rem;
+        font-size: 0.96rem;
         color: #6e5261;
+        line-height: 1.5;
     }
 
     .click-pointer {
         position: absolute;
         right: 18px;
-        bottom: 18px;
+        bottom: 14px;
         font-size: 1.9rem;
         animation: bounceClick 1.2s infinite;
     }
@@ -460,30 +483,37 @@ def save_contact(name, email, message, language_used):
         ])
 
 # -----------------------------
+# Image helper with fallback
+# -----------------------------
+def show_main_image():
+    local_path = "image/migrant_women_korea.jpg"
+    fallback_url = "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1600&auto=format&fit=crop"
+
+    if os.path.exists(local_path):
+        st.image(local_path, caption=T["image_caption"], use_container_width=True)
+    else:
+        st.image(fallback_url, caption=T["image_caption"], use_container_width=True)
+
+# -----------------------------
 # Pages
 # -----------------------------
 if page == T["nav"][0]:
-    st.markdown(
-        f"""
-        <div class="hero">
-            <h1>{T['hero_title']}</h1>
-            <h3>{T['hero_subtitle']}</h3>
-            <p style="font-size: 1.05rem;">{T['hero_text']}</p>
-        </div>
-        """,
-        unsafe_allow_html=True,
-    )
-
     CHATBOT_URL = "https://claude.ai/public/artifacts/b41dd0b5-9521-4854-bf05-14ac487c5b5b"
 
     st.markdown(
         f"""
-        <div class="chatbot-card-wrap">
-            <a class="chatbot-card" href="{CHATBOT_URL}" target="_blank">
-                <div class="chatbot-title">{T['chatbot_title']}</div>
-                <div class="chatbot-desc">{T['chatbot_desc']}</div>
-                <div class="click-pointer">👆</div>
-            </a>
+        <div class="hero">
+            <div class="chatbot-card-wrap">
+                <a class="chatbot-card" href="{CHATBOT_URL}" target="_blank">
+                    <div class="chatbot-title">{T['chatbot_title']}</div>
+                    <div class="chatbot-desc">{T['chatbot_desc']}</div>
+                    <div class="click-pointer">👆</div>
+                </a>
+            </div>
+
+            <div class="hero-title">{T['hero_title']}</div>
+            <div class="hero-subtitle">{T['hero_subtitle']}</div>
+            <div class="hero-text">{T['hero_text']}</div>
         </div>
         """,
         unsafe_allow_html=True,
@@ -510,11 +540,7 @@ if page == T["nav"][0]:
             )
 
     st.write("")
-    st.image(
-        "image/migrant_women_korea.jpg",
-        caption=T["image_caption"],
-        use_container_width=True,
-    )
+    show_main_image()
 
 elif page == T["nav"][1]:
     st.header(T["about_title"])
