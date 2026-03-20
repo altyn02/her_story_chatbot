@@ -1,8 +1,6 @@
 import csv
 import os
-import textwrap
 from datetime import datetime
-import textwrap
 
 import streamlit as st
 
@@ -22,8 +20,8 @@ st.markdown(
         background: linear-gradient(180deg, #fff8fb 0%, #fffdfd 100%);
     }
 
-    .hero {
-        padding: 2.2rem 2rem 3rem 2rem;
+    .hero-box {
+        padding: 2.2rem 2rem 2.4rem 2rem;
         border-radius: 26px;
         background: linear-gradient(135deg, #ffe4ef 0%, #fdf1ff 55%, #fff8fb 100%);
         margin-bottom: 2rem;
@@ -31,22 +29,15 @@ st.markdown(
         box-shadow: 0 10px 30px rgba(240, 170, 205, 0.15);
     }
 
-    .hero-title {
-        margin-top: 1.2rem;
-        margin-bottom: 0.6rem;
-        font-size: 3rem;
-        font-weight: 800;
-        color: #313545;
-    }
-
-    .hero-subtitle {
+    .hero-subtitle-custom {
         font-size: 1.2rem;
         font-weight: 700;
         color: #313545;
+        margin-top: 0.2rem;
         margin-bottom: 1rem;
     }
 
-    .hero-text {
+    .hero-text-custom {
         font-size: 1.05rem;
         color: #4b4654;
         line-height: 1.7;
@@ -96,6 +87,7 @@ st.markdown(
         color: #4b2e3f;
         box-shadow: 0 12px 30px rgba(240,170,205,0.20);
         transition: 0.2s;
+        display: block;
     }
 
     .chatbot-card:hover {
@@ -145,8 +137,6 @@ content = {
             "Her Story is designed to support emotional well-being, reflection, and "
             "easier access to guidance through a multilingual and user-friendly digital service."
         ),
-        "button_1": "Explore Our Service",
-        "button_2": "Read Future Vision",
         "cards": [
             ("Multilingual Support", "Users can explore the platform in a language that feels comfortable and natural."),
             ("Reflection and Guidance", "The service is designed to support emotional expression, self-reflection, and practical guidance."),
@@ -182,6 +172,7 @@ content = {
         "form_button": "Submit",
         "form_success": "Thank you. Your message was saved successfully.",
         "form_warning": "Please fill in all fields.",
+        "form_invalid_email": "Please enter a valid email address.",
         "footer": "Prototype website built with Streamlit.",
         "key_elements": "Key Elements",
         "why_matters": "Why It Matters",
@@ -211,8 +202,6 @@ content = {
             "Her Story는 다국어 기반의 사용자 친화적인 디지털 서비스를 통해 "
             "정서적 지원, 자기성찰, 그리고 유용한 정보 접근을 돕는 것을 목표로 합니다."
         ),
-        "button_1": "서비스 보기",
-        "button_2": "향후 비전 보기",
         "cards": [
             ("다국어 지원", "사용자가 더 편안하고 자연스러운 언어로 플랫폼을 이용할 수 있습니다."),
             ("성찰과 가이드", "감정 표현, 자기 성찰, 그리고 실질적인 안내를 지원하도록 설계되었습니다."),
@@ -247,6 +236,7 @@ content = {
         "form_button": "제출",
         "form_success": "감사합니다. 메시지가 저장되었습니다.",
         "form_warning": "모든 항목을 입력해 주세요.",
+        "form_invalid_email": "올바른 이메일 주소를 입력해 주세요.",
         "footer": "Streamlit으로 제작한 프로토타입 웹사이트입니다.",
         "key_elements": "핵심 요소",
         "why_matters": "이 서비스가 중요한 이유",
@@ -266,8 +256,6 @@ content = {
             "Her Story создан как многоязычный и удобный цифровой сервис, "
             "который помогает с эмоциональной поддержкой, рефлексией и доступом к полезной информации."
         ),
-        "button_1": "О сервисе",
-        "button_2": "Будущее проекта",
         "cards": [
             ("Многоязычная поддержка", "Пользовательницы могут пользоваться платформой на более удобном и естественном для себя языке."),
             ("Рефлексия и поддержка", "Сервис помогает с эмоциональным выражением, саморефлексией и практической поддержкой."),
@@ -304,6 +292,7 @@ content = {
         "form_button": "Отправить",
         "form_success": "Спасибо. Сообщение успешно сохранено.",
         "form_warning": "Пожалуйста, заполните все поля.",
+        "form_invalid_email": "Пожалуйста, введите корректный email.",
         "footer": "Прототип сайта, созданный на Streamlit.",
         "key_elements": "Ключевые элементы",
         "why_matters": "Почему это важно",
@@ -333,8 +322,6 @@ content = {
             "Her Story được thiết kế như một dịch vụ kỹ thuật số đa ngôn ngữ "
             "nhằm hỗ trợ sức khỏe tinh thần, sự tự phản ánh và giúp tiếp cận thông tin dễ dàng hơn."
         ),
-        "button_1": "Khám phá dịch vụ",
-        "button_2": "Tầm nhìn tương lai",
         "cards": [
             ("Hỗ trợ đa ngôn ngữ", "Người dùng có thể sử dụng nền tảng bằng ngôn ngữ mà họ cảm thấy thoải mái nhất."),
             ("Tự phản ánh và hỗ trợ", "Dịch vụ giúp người dùng thể hiện cảm xúc, suy ngẫm về bản thân và nhận được hướng dẫn thực tế."),
@@ -374,6 +361,7 @@ content = {
         "form_button": "Gửi",
         "form_success": "Cảm ơn bạn. Tin nhắn đã được lưu thành công.",
         "form_warning": "Vui lòng điền đầy đủ tất cả các trường.",
+        "form_invalid_email": "Vui lòng nhập địa chỉ email hợp lệ.",
         "footer": "Trang web nguyên mẫu được xây dựng bằng Streamlit.",
         "key_elements": "Các yếu tố chính",
         "why_matters": "Tại sao điều này quan trọng",
@@ -400,8 +388,8 @@ content = {
 # -----------------------------
 # Top controls
 # -----------------------------
-col1, col2 = st.columns([7, 1])
-with col2:
+_, lang_col = st.columns([7, 1])
+with lang_col:
     language = st.selectbox("🌍", ["English", "한국어", "Русский", "Tiếng Việt"])
 
 T = content[language]
@@ -427,16 +415,31 @@ def save_contact(name, email, message, language_used):
         ])
 
 # -----------------------------
-# Image helper with fallback
+# Simple email validation
+# -----------------------------
+def is_valid_email(email):
+    email = email.strip()
+    return "@" in email and "." in email and len(email) >= 5
+
+# -----------------------------
+# Image helper
 # -----------------------------
 def show_main_image():
-    local_path = "image/migrant_women_korea.jpg"
-    fallback_url = "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1600&auto=format&fit=crop"
+    possible_paths = [
+        "women@dior.jpg",
+        "image/women@dior.jpg",
+        "images/women@dior.jpg",
+        "women_dior.jpg",
+        "image/women_dior.jpg",
+        "images/women_dior.jpg",
+    ]
 
-    if os.path.exists(local_path):
-        st.image(local_path, caption=T["image_caption"], use_container_width=True)
-    else:
-        st.image(fallback_url, caption=T["image_caption"], use_container_width=True)
+    for path in possible_paths:
+        if os.path.exists(path):
+            st.image(path, caption=T["image_caption"], use_container_width=True)
+            return
+
+    st.warning("Image file not found. Please check the path of women@dior.jpg in your repository.")
 
 # -----------------------------
 # Pages
@@ -444,8 +447,8 @@ def show_main_image():
 if page == T["nav"][0]:
     chatbot_url = "https://claude.ai/public/artifacts/b41dd0b5-9521-4854-bf05-14ac487c5b5b"
 
-    hero_html = textwrap.dedent(f"""
-    <div class="hero">
+    st.markdown(
+        f"""
         <div class="chatbot-card-wrap">
             <a class="chatbot-card" href="{chatbot_url}" target="_blank">
                 <div class="chatbot-title">{T['chatbot_title']}</div>
@@ -453,20 +456,21 @@ if page == T["nav"][0]:
                 <div class="click-pointer">👆</div>
             </a>
         </div>
+        """,
+        unsafe_allow_html=True,
+    )
 
-        <div class="hero-title">{T['hero_title']}</div>
-        <div class="hero-subtitle">{T['hero_subtitle']}</div>
-        <div class="hero-text">{T['hero_text']}</div>
-    </div>
-    """)
-
-    st.markdown(hero_html, unsafe_allow_html=True)
-
-    col1, col2 = st.columns(2)
-    with col1:
-        st.button(T["button_1"], use_container_width=True)
-    with col2:
-        st.button(T["button_2"], use_container_width=True)
+    st.markdown('<div class="hero-box">', unsafe_allow_html=True)
+    st.title(T["hero_title"])
+    st.markdown(
+        f'<div class="hero-subtitle-custom">{T["hero_subtitle"]}</div>',
+        unsafe_allow_html=True,
+    )
+    st.markdown(
+        f'<div class="hero-text-custom">{T["hero_text"]}</div>',
+        unsafe_allow_html=True,
+    )
+    st.markdown("</div>", unsafe_allow_html=True)
 
     st.write("")
     cards = st.columns(3)
@@ -534,10 +538,16 @@ elif page == T["nav"][5]:
         submitted = st.form_submit_button(T["form_button"])
 
         if submitted:
-            if name and email and message:
-                save_contact(name, email, message, language)
-                st.success(T["form_success"])
-            else:
+            clean_name = name.strip()
+            clean_email = email.strip()
+            clean_message = message.strip()
+
+            if not clean_name or not clean_email or not clean_message:
                 st.warning(T["form_warning"])
+            elif not is_valid_email(clean_email):
+                st.warning(T["form_invalid_email"])
+            else:
+                save_contact(clean_name, clean_email, clean_message, language)
+                st.success(T["form_success"])
 
 st.markdown(f"<div class='footer'>{T['footer']}</div>", unsafe_allow_html=True)
