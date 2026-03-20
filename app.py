@@ -442,17 +442,8 @@ def is_valid_email(email):
 # -----------------------------
 def show_main_image():
     possible_paths = [
-        "women@dior.jpg",
-        "women@dior.png",
-        "women_dior.jpg",
         "women_dior.png",
-        "image/women@dior.jpg",
-        "image/women@dior.png",
-        "image/women_dior.jpg",
         "image/women_dior.png",
-        "images/women@dior.jpg",
-        "images/women@dior.png",
-        "images/women_dior.jpg",
         "images/women_dior.png",
     ]
 
