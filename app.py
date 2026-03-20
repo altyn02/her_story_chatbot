@@ -20,15 +20,6 @@ st.markdown(
         background: linear-gradient(180deg, #fff8fb 0%, #fffdfd 100%);
     }
 
-    .hero-box {
-        padding: 2.2rem 2rem 2.4rem 2rem;
-        border-radius: 26px;
-        background: linear-gradient(135deg, #ffe4ef 0%, #fdf1ff 55%, #fff8fb 100%);
-        margin-bottom: 2rem;
-        border: 1px solid #f8d6e5;
-        box-shadow: 0 10px 30px rgba(240, 170, 205, 0.15);
-    }
-
     .hero-subtitle-custom {
         font-size: 1.2rem;
         font-weight: 700;
@@ -41,6 +32,7 @@ st.markdown(
         font-size: 1.05rem;
         color: #4b4654;
         line-height: 1.7;
+        margin-bottom: 1.2rem;
     }
 
     .card {
@@ -72,7 +64,7 @@ st.markdown(
     .chatbot-card-wrap {
         display: flex;
         justify-content: flex-start;
-        margin-top: 0;
+        margin-top: 0.4rem;
         margin-bottom: 1.4rem;
     }
 
@@ -137,6 +129,11 @@ content = {
             "Her Story is designed to support emotional well-being, reflection, and "
             "easier access to guidance through a multilingual and user-friendly digital service."
         ),
+        "chatbot_info_title": "What is Re:Her Chatbot?",
+        "chatbot_info_text": (
+            "Re:Her Chatbot is a gentle guidance-based chatbot designed to support migrant women "
+            "through emotional check-ins, reflective conversation, and multilingual interaction."
+        ),
         "cards": [
             ("Multilingual Support", "Users can explore the platform in a language that feels comfortable and natural."),
             ("Reflection and Guidance", "The service is designed to support emotional expression, self-reflection, and practical guidance."),
@@ -193,6 +190,7 @@ content = {
         "chatbot_title": "🤖 Re:Her Chatbot",
         "chatbot_desc": "Click here to open the interactive chatbot experience.",
         "image_caption": "Supporting migrant and marriage migrant women in Korea",
+        "image_not_found": "Image file not found. Please check the path in your repository.",
     },
     "한국어": {
         "nav": ["홈", "소개", "서비스", "대상 사용자", "향후 비전", "문의"],
@@ -201,6 +199,11 @@ content = {
         "hero_text": (
             "Her Story는 다국어 기반의 사용자 친화적인 디지털 서비스를 통해 "
             "정서적 지원, 자기성찰, 그리고 유용한 정보 접근을 돕는 것을 목표로 합니다."
+        ),
+        "chatbot_info_title": "Re:Her 챗봇이란?",
+        "chatbot_info_text": (
+            "Re:Her 챗봇은 이주여성을 위해 설계된 부드러운 가이드형 챗봇으로, "
+            "감정 확인, 성찰적 대화, 그리고 다국어 상호작용을 지원합니다."
         ),
         "cards": [
             ("다국어 지원", "사용자가 더 편안하고 자연스러운 언어로 플랫폼을 이용할 수 있습니다."),
@@ -247,6 +250,7 @@ content = {
         "chatbot_title": "🤖 Re:Her 챗봇",
         "chatbot_desc": "클릭하여 대화형 챗봇 경험을 시작하세요.",
         "image_caption": "한국의 이주여성과 결혼이주여성을 위한 지원",
+        "image_not_found": "이미지 파일을 찾을 수 없습니다. 저장소의 경로를 확인해 주세요.",
     },
     "Русский": {
         "nav": ["Главная", "О проекте", "Наш сервис", "Для кого", "Будущее", "Контакты"],
@@ -255,6 +259,11 @@ content = {
         "hero_text": (
             "Her Story создан как многоязычный и удобный цифровой сервис, "
             "который помогает с эмоциональной поддержкой, рефлексией и доступом к полезной информации."
+        ),
+        "chatbot_info_title": "Что такое Re:Her Chatbot?",
+        "chatbot_info_text": (
+            "Re:Her Chatbot — это чатбот с мягким направляющим стилем, созданный для поддержки "
+            "женщин-мигранток через эмоциональную поддержку, рефлексивный диалог и многоязычное общение."
         ),
         "cards": [
             ("Многоязычная поддержка", "Пользовательницы могут пользоваться платформой на более удобном и естественном для себя языке."),
@@ -313,6 +322,7 @@ content = {
         "chatbot_title": "🤖 Re:Her Чатбот",
         "chatbot_desc": "Нажмите здесь, чтобы открыть интерактивный чатбот.",
         "image_caption": "Поддержка мигранток и женщин в брачной миграции в Корее",
+        "image_not_found": "Файл изображения не найден. Проверьте путь в репозитории.",
     },
     "Tiếng Việt": {
         "nav": ["Trang chủ", "Giới thiệu", "Dịch vụ", "Người dùng", "Tầm nhìn", "Liên hệ"],
@@ -321,6 +331,11 @@ content = {
         "hero_text": (
             "Her Story được thiết kế như một dịch vụ kỹ thuật số đa ngôn ngữ "
             "nhằm hỗ trợ sức khỏe tinh thần, sự tự phản ánh và giúp tiếp cận thông tin dễ dàng hơn."
+        ),
+        "chatbot_info_title": "Re:Her Chatbot là gì?",
+        "chatbot_info_text": (
+            "Re:Her Chatbot là một chatbot hướng dẫn nhẹ nhàng, được thiết kế để hỗ trợ phụ nữ nhập cư "
+            "thông qua trò chuyện phản ánh, hỗ trợ cảm xúc và tương tác đa ngôn ngữ."
         ),
         "cards": [
             ("Hỗ trợ đa ngôn ngữ", "Người dùng có thể sử dụng nền tảng bằng ngôn ngữ mà họ cảm thấy thoải mái nhất."),
@@ -382,6 +397,7 @@ content = {
         "chatbot_title": "🤖 Chatbot Re:Her",
         "chatbot_desc": "Nhấn vào đây để mở trải nghiệm chatbot tương tác.",
         "image_caption": "Hỗ trợ phụ nữ nhập cư và phụ nữ kết hôn với người Hàn tại Hàn Quốc",
+        "image_not_found": "Không tìm thấy tệp hình ảnh. Vui lòng kiểm tra đường dẫn trong repository.",
     },
 }
 
@@ -426,11 +442,17 @@ def is_valid_email(email):
 # -----------------------------
 def show_main_image():
     possible_paths = [
+        "women@dior.jpg",
+        "women@dior.png",
+        "women_dior.jpg",
         "women_dior.png",
+        "image/women@dior.jpg",
+        "image/women@dior.png",
+        "image/women_dior.jpg",
         "image/women_dior.png",
-        "images/women_dior.png",
-        "women_dior.png",
-        "image/women_dior.png",
+        "images/women@dior.jpg",
+        "images/women@dior.png",
+        "images/women_dior.jpg",
         "images/women_dior.png",
     ]
 
@@ -439,13 +461,33 @@ def show_main_image():
             st.image(path, caption=T["image_caption"], use_container_width=True)
             return
 
-    st.warning("Image file not found. Please check the path of women@dior.jpg in your repository.")
+    st.warning(T["image_not_found"])
 
 # -----------------------------
 # Pages
 # -----------------------------
 if page == T["nav"][0]:
     chatbot_url = "https://claude.ai/public/artifacts/b41dd0b5-9521-4854-bf05-14ac487c5b5b"
+
+    st.title(T["hero_title"])
+    st.markdown(
+        f'<div class="hero-subtitle-custom">{T["hero_subtitle"]}</div>',
+        unsafe_allow_html=True,
+    )
+    st.markdown(
+        f'<div class="hero-text-custom">{T["hero_text"]}</div>',
+        unsafe_allow_html=True,
+    )
+
+    st.markdown(
+        f"""
+        <div class="soft-box">
+            <h4>{T["chatbot_info_title"]}</h4>
+            <p>{T["chatbot_info_text"]}</p>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
 
     st.markdown(
         f"""
@@ -459,18 +501,6 @@ if page == T["nav"][0]:
         """,
         unsafe_allow_html=True,
     )
-
-    st.markdown('<div class="hero-box">', unsafe_allow_html=True)
-    st.title(T["hero_title"])
-    st.markdown(
-        f'<div class="hero-subtitle-custom">{T["hero_subtitle"]}</div>',
-        unsafe_allow_html=True,
-    )
-    st.markdown(
-        f'<div class="hero-text-custom">{T["hero_text"]}</div>',
-        unsafe_allow_html=True,
-    )
-    st.markdown("</div>", unsafe_allow_html=True)
 
     st.write("")
     cards = st.columns(3)
