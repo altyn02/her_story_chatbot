@@ -458,7 +458,7 @@ def show_main_image():
 # Pages
 # -----------------------------
 if page == T["nav"][0]:
-    chatbot_url = "https://claude.ai/public/artifacts/b41dd0b5-9521-4854-bf05-14ac487c5b5b"
+    chatbot_url = "https://claude.ai/public/artifacts/5b982ccf-9db2-4ed7-bf99-8be5ada85b2b"
 
     st.title(T["hero_title"])
     st.markdown(
