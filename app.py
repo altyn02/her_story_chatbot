@@ -132,7 +132,7 @@ content = {
         "chatbot_info_title": "What is Re:Her Chatbot?",
         "chatbot_info_text": (
             "Re:Her Chatbot is a gentle guidance-based chatbot designed to support migrant women "
-            "through emotional check-ins, reflective conversation, and multilingual interaction."
+            "through emotional check-ins, reflective conversation, and multilingual interaction. But to use this chatbot, you will need to register for Claude^^"
         ),
         "cards": [
             ("Multilingual Support", "Users can explore the platform in a language that feels comfortable and natural."),
