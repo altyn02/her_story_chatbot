@@ -6,7 +6,7 @@ import streamlit as st
 
 st.set_page_config(
     page_title="Her Story",
-    page_icon="🌸",
+    page_icon="🪻",
     layout="wide",
 )
 
@@ -123,7 +123,7 @@ st.markdown(
 content = {
     "English": {
         "nav": ["Home", "About", "Our Service", "Target Users", "Future Vision", "Contact"],
-        "hero_title": "🌸 Her Story 🌸",
+        "hero_title": "🪻 Her Story 🪻",
         "hero_subtitle": "A supportive digital space for migrant women in Korea",
         "hero_text": (
             "Her Story is designed to support emotional well-being, reflection, and "
@@ -194,7 +194,7 @@ content = {
     },
     "한국어": {
         "nav": ["홈", "소개", "서비스", "대상 사용자", "향후 비전", "문의"],
-        "hero_title": "🌸 Her Story 🌸",
+        "hero_title": "🪻 Her Story 🪻",
         "hero_subtitle": "한국에 거주하는 이주여성을 위한 따뜻한 디지털 공간",
         "hero_text": (
             "Her Story는 다국어 기반의 사용자 친화적인 디지털 서비스를 통해 "
@@ -254,7 +254,7 @@ content = {
     },
     "Русский": {
         "nav": ["Главная", "О проекте", "Наш сервис", "Для кого", "Будущее", "Контакты"],
-        "hero_title": "🌸 Her Story 🌸",
+        "hero_title": "🪻 Her Story 🪻",
         "hero_subtitle": "Поддерживающее цифровое пространство для мигранток в Корее",
         "hero_text": (
             "Her Story создан как многоязычный и удобный цифровой сервис, "
@@ -326,7 +326,7 @@ content = {
     },
     "Tiếng Việt": {
         "nav": ["Trang chủ", "Giới thiệu", "Dịch vụ", "Người dùng", "Tầm nhìn", "Liên hệ"],
-        "hero_title": "🌸 Her Story 🌸",
+        "hero_title": "🪻 Her Story 🪻",
         "hero_subtitle": "Không gian kỹ thuật số hỗ trợ phụ nữ nhập cư tại Hàn Quốc",
         "hero_text": (
             "Her Story được thiết kế như một dịch vụ kỹ thuật số đa ngôn ngữ "
