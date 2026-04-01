@@ -17,20 +17,20 @@ st.markdown(
     """
     <style>
     .stApp {
-        background: linear-gradient(180deg, #fff8fb 0%, #fffdfd 100%);
+        background: linear-gradient(180deg, #f4f8fb 0%, #ffffff 100%);
     }
 
     .hero-subtitle-custom {
         font-size: 1.2rem;
         font-weight: 700;
-        color: #313545;
+        color: #2c3e50;
         margin-top: 0.2rem;
         margin-bottom: 1rem;
     }
 
     .hero-text-custom {
         font-size: 1.05rem;
-        color: #4b4654;
+        color: #4a5568;
         line-height: 1.7;
         margin-bottom: 1.2rem;
     }
@@ -38,24 +38,24 @@ st.markdown(
     .card {
         padding: 1.2rem;
         border-radius: 18px;
-        background: #fffafb;
-        border: 1px solid #f5dce8;
+        background: #ffffff;
+        border: 1px solid #dbe7f3;
         min-height: 220px;
-        box-shadow: 0 6px 20px rgba(240, 170, 205, 0.08);
+        box-shadow: 0 6px 20px rgba(0, 102, 204, 0.08);
     }
 
     .soft-box {
         padding: 1rem 1.2rem;
         border-radius: 16px;
-        background: #fff0f6;
-        border-left: 5px solid #f19ac0;
+        background: #eaf3fb;
+        border-left: 5px solid #3b82f6;
         margin-top: 1rem;
         margin-bottom: 1rem;
     }
 
     .footer {
         text-align: center;
-        color: #8b6a7d;
+        color: #6b7280;
         font-size: 0.9rem;
         padding-top: 2rem;
         padding-bottom: 1rem;
@@ -71,13 +71,13 @@ st.markdown(
     .chatbot-card {
         position: relative;
         width: 430px;
-        background: #fff6fb;
-        border: 1px solid #f3d7e6;
+        background: #f8fbff;
+        border: 1px solid #d6e6f5;
         border-radius: 24px;
         padding: 22px 24px;
         text-decoration: none;
-        color: #4b2e3f;
-        box-shadow: 0 12px 30px rgba(240,170,205,0.20);
+        color: #1e3a5f;
+        box-shadow: 0 12px 30px rgba(0, 102, 204, 0.15);
         transition: 0.2s;
         display: block;
     }
@@ -90,12 +90,12 @@ st.markdown(
         font-size: 1.25rem;
         font-weight: 700;
         margin-bottom: 8px;
-        color: #8b2f66;
+        color: #2563eb;
     }
 
     .chatbot-desc {
         font-size: 0.96rem;
-        color: #6e5261;
+        color: #475569;
         line-height: 1.5;
     }
 
