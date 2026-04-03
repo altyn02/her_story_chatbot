@@ -6,115 +6,8 @@ import streamlit as st
 
 st.set_page_config(
     page_title="HerStory",
-    page_icon="",
+    page_icon="💙",
     layout="wide",
-)
-
-# -----------------------------
-# Styling
-# -----------------------------
-st.markdown(
-    """
-    <style>
-    .stApp {
-        background: linear-gradient(180deg, #f4f8fb 0%, #ffffff 100%);
-    }
-
-    .hero-subtitle-custom {
-        font-size: 1.2rem;
-        font-weight: 700;
-        color: #2c3e50;
-        margin-top: 0.2rem;
-        margin-bottom: 1rem;
-    }
-
-    .hero-text-custom {
-        font-size: 1.05rem;
-        color: #4a5568;
-        line-height: 1.7;
-        margin-bottom: 1.2rem;
-    }
-
-    .card {
-        padding: 1.2rem;
-        border-radius: 18px;
-        background: #ffffff;
-        border: 1px solid #dbe7f3;
-        min-height: 220px;
-        box-shadow: 0 6px 20px rgba(0, 102, 204, 0.08);
-    }
-
-    .soft-box {
-        padding: 1rem 1.2rem;
-        border-radius: 16px;
-        background: #eaf3fb;
-        border-left: 5px solid #3b82f6;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-    }
-
-    .footer {
-        text-align: center;
-        color: #6b7280;
-        font-size: 0.9rem;
-        padding-top: 2rem;
-        padding-bottom: 1rem;
-    }
-
-    .chatbot-card-wrap {
-        display: flex;
-        justify-content: flex-start;
-        margin-top: 0.4rem;
-        margin-bottom: 1.4rem;
-    }
-
-    .chatbot-card {
-        position: relative;
-        width: 430px;
-        background: #f8fbff;
-        border: 1px solid #d6e6f5;
-        border-radius: 24px;
-        padding: 22px 24px;
-        text-decoration: none;
-        color: #1e3a5f;
-        box-shadow: 0 12px 30px rgba(0, 102, 204, 0.15);
-        transition: 0.2s;
-        display: block;
-    }
-
-    .chatbot-card:hover {
-        transform: translateY(-4px);
-    }
-
-    .chatbot-title {
-        font-size: 1.25rem;
-        font-weight: 700;
-        margin-bottom: 8px;
-        color: #2563eb;
-    }
-
-    .chatbot-desc {
-        font-size: 0.96rem;
-        color: #475569;
-        line-height: 1.5;
-    }
-
-    .click-pointer {
-        position: absolute;
-        right: 18px;
-        bottom: 14px;
-        font-size: 1.9rem;
-        animation: bounceClick 1.2s infinite;
-    }
-
-    @keyframes bounceClick {
-        0% { transform: translateY(0); }
-        50% { transform: translateY(-10px); }
-        100% { transform: translateY(0); }
-    }
-    </style>
-    """,
-    unsafe_allow_html=True,
 )
 
 # -----------------------------
@@ -123,7 +16,7 @@ st.markdown(
 content = {
     "English": {
         "nav": ["Home", "About", "Our Service", "Target Users", "Future Vision", "Contact"],
-        "hero_title": " HerStory ",
+        "hero_title": "HerStory",
         "hero_subtitle": "A supportive digital space for migrant women in Korea",
         "hero_text": (
             "HerStory is designed to support emotional well-being, reflection, and "
@@ -132,7 +25,8 @@ content = {
         "chatbot_info_title": "What is Re:Her Chatbot?",
         "chatbot_info_text": (
             "Re:Her Chatbot is a gentle guidance-based chatbot designed to support migrant women "
-            "through emotional check-ins, reflective conversation, and multilingual interaction. But to use this chatbot, you will need to register for Claude^^"
+            "through emotional check-ins, reflective conversation, and multilingual interaction. "
+            "To use this chatbot, registration for Claude may be required."
         ),
         "cards": [
             ("Multilingual Support", "Users can explore the platform in a language that feels comfortable and natural."),
@@ -191,10 +85,13 @@ content = {
         "chatbot_desc": "Click here to open the interactive chatbot experience.",
         "image_caption": "Supporting migrant and marriage migrant women in Korea",
         "image_not_found": "Image file not found. Please check the path in your repository.",
+        "theme_label": "Theme",
+        "theme_light": "Light",
+        "theme_dark": "Dark",
     },
     "한국어": {
         "nav": ["홈", "소개", "서비스", "대상 사용자", "향후 비전", "문의"],
-        "hero_title": " HerStory ",
+        "hero_title": "HerStory",
         "hero_subtitle": "한국에 거주하는 이주여성을 위한 따뜻한 디지털 공간",
         "hero_text": (
             "HerStory는 다국어 기반의 사용자 친화적인 디지털 서비스를 통해 "
@@ -203,7 +100,8 @@ content = {
         "chatbot_info_title": "Re:Her 챗봇이란?",
         "chatbot_info_text": (
             "Re:Her 챗봇은 이주여성을 위해 설계된 부드러운 가이드형 챗봇으로, "
-            "감정 확인, 성찰적 대화, 그리고 다국어 상호작용을 지원합니다."
+            "감정 확인, 성찰적 대화, 그리고 다국어 상호작용을 지원합니다. "
+            "이용을 위해 Claude 가입이 필요할 수 있습니다."
         ),
         "cards": [
             ("다국어 지원", "사용자가 더 편안하고 자연스러운 언어로 플랫폼을 이용할 수 있습니다."),
@@ -251,10 +149,13 @@ content = {
         "chatbot_desc": "클릭하여 대화형 챗봇 경험을 시작하세요.",
         "image_caption": "한국의 이주여성과 결혼이주여성을 위한 지원",
         "image_not_found": "이미지 파일을 찾을 수 없습니다. 저장소의 경로를 확인해 주세요.",
+        "theme_label": "테마",
+        "theme_light": "라이트",
+        "theme_dark": "다크",
     },
     "Русский": {
         "nav": ["Главная", "О проекте", "Наш сервис", "Для кого", "Будущее", "Контакты"],
-        "hero_title": " HerStory ",
+        "hero_title": "HerStory",
         "hero_subtitle": "Поддерживающее цифровое пространство для мигранток в Корее",
         "hero_text": (
             "HerStory создан как многоязычный и удобный цифровой сервис, "
@@ -263,7 +164,8 @@ content = {
         "chatbot_info_title": "Что такое Re:Her Chatbot?",
         "chatbot_info_text": (
             "Re:Her Chatbot — это чатбот с мягким направляющим стилем, созданный для поддержки "
-            "женщин-мигранток через эмоциональную поддержку, рефлексивный диалог и многоязычное общение."
+            "женщин-мигранток через эмоциональную поддержку, рефлексивный диалог и многоязычное общение. "
+            "Для использования может потребоваться регистрация в Claude."
         ),
         "cards": [
             ("Многоязычная поддержка", "Пользовательницы могут пользоваться платформой на более удобном и естественном для себя языке."),
@@ -322,11 +224,14 @@ content = {
         "chatbot_title": "🤖 Re:Her Чатбот",
         "chatbot_desc": "Нажмите здесь, чтобы открыть интерактивный чатбот.",
         "image_caption": "Поддержка мигранток и женщин в брачной миграции в Корее",
-        "image_not_found": "Файл изображения не найден. Проверьте путь в репозитории.",
+        "image_not_found": "Файл изображения не найден. Проверьте путь в repository.",
+        "theme_label": "Тема",
+        "theme_light": "Светлая",
+        "theme_dark": "Тёмная",
     },
     "Tiếng Việt": {
         "nav": ["Trang chủ", "Giới thiệu", "Dịch vụ", "Người dùng", "Tầm nhìn", "Liên hệ"],
-        "hero_title": " HerStory ",
+        "hero_title": "HerStory",
         "hero_subtitle": "Không gian kỹ thuật số hỗ trợ phụ nữ nhập cư tại Hàn Quốc",
         "hero_text": (
             "HerStory được thiết kế như một dịch vụ kỹ thuật số đa ngôn ngữ "
@@ -335,7 +240,8 @@ content = {
         "chatbot_info_title": "Re:Her Chatbot là gì?",
         "chatbot_info_text": (
             "Re:Her Chatbot là một chatbot hướng dẫn nhẹ nhàng, được thiết kế để hỗ trợ phụ nữ nhập cư "
-            "thông qua trò chuyện phản ánh, hỗ trợ cảm xúc và tương tác đa ngôn ngữ."
+            "thông qua trò chuyện phản ánh, hỗ trợ cảm xúc và tương tác đa ngôn ngữ. "
+            "Có thể cần đăng ký Claude để sử dụng."
         ),
         "cards": [
             ("Hỗ trợ đa ngôn ngữ", "Người dùng có thể sử dụng nền tảng bằng ngôn ngữ mà họ cảm thấy thoải mái nhất."),
@@ -398,21 +304,14 @@ content = {
         "chatbot_desc": "Nhấn vào đây để mở trải nghiệm chatbot tương tác.",
         "image_caption": "Hỗ trợ phụ nữ nhập cư và phụ nữ kết hôn với người Hàn tại Hàn Quốc",
         "image_not_found": "Không tìm thấy tệp hình ảnh. Vui lòng kiểm tra đường dẫn trong repository.",
+        "theme_label": "Giao diện",
+        "theme_light": "Sáng",
+        "theme_dark": "Tối",
     },
 }
 
 # -----------------------------
-# Top controls
-# -----------------------------
-_, lang_col = st.columns([7, 1])
-with lang_col:
-    language = st.selectbox("🌍", ["English", "한국어", "Русский", "Tiếng Việt"])
-
-T = content[language]
-page = st.radio("", T["nav"], horizontal=True)
-
-# -----------------------------
-# Save contact submissions
+# Helper functions
 # -----------------------------
 def save_contact(name, email, message, language_used):
     file_path = "contact_messages.csv"
@@ -430,17 +329,11 @@ def save_contact(name, email, message, language_used):
             language_used,
         ])
 
-# -----------------------------
-# Simple email validation
-# -----------------------------
 def is_valid_email(email):
     email = email.strip()
     return "@" in email and "." in email and len(email) >= 5
 
-# -----------------------------
-# Image helper
-# -----------------------------
-def show_main_image():
+def show_main_image(caption, not_found_message):
     possible_paths = [
         "women_dior.png",
         "image/women_dior.png",
@@ -449,10 +342,267 @@ def show_main_image():
 
     for path in possible_paths:
         if os.path.exists(path):
-            st.image(path, caption=T["image_caption"], use_container_width=True)
+            st.image(path, caption=caption, use_container_width=True)
             return
 
-    st.warning(T["image_not_found"])
+    st.warning(not_found_message)
+
+def apply_custom_css(theme_mode="Light"):
+    if theme_mode == "Dark":
+        bg = "#212121"
+        surface = "#2B2B2B"
+        soft_surface = "#1E2D3B"
+        border = "#3A3A3A"
+        text = "#FFFFFF"
+        muted = "#D1D5DB"
+        subtle = "#A1A1AA"
+        card_text = "#F5F5F5"
+        link = "#66B2FF"
+        shadow = "0 8px 24px rgba(0, 0, 0, 0.35)"
+    else:
+        bg = "#FFFFFF"
+        surface = "#F8FBFF"
+        soft_surface = "#EAF4FF"
+        border = "#D6E6F5"
+        text = "#212121"
+        muted = "#4B5563"
+        subtle = "#6B7280"
+        card_text = "#2D3748"
+        link = "#0077D4"
+        shadow = "0 8px 24px rgba(0, 119, 212, 0.10)"
+
+    primary = "#0077D4"
+
+    st.markdown(
+        f"""
+        <style>
+        html, body, [class*="css"] {{
+            font-family: "Inter", "Segoe UI", sans-serif;
+        }}
+
+        .stApp {{
+            background: {bg};
+            color: {text};
+        }}
+
+        [data-testid="stHeader"] {{
+            background: transparent;
+        }}
+
+        [data-testid="stToolbar"] {{
+            right: 1rem;
+        }}
+
+        h1, h2, h3, h4, h5, h6 {{
+            color: {text} !important;
+        }}
+
+        p, li, label, div, span {{
+            color: {text};
+        }}
+
+        .hero-subtitle-custom {{
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: {primary};
+            margin-top: 0.2rem;
+            margin-bottom: 1rem;
+        }}
+
+        .hero-text-custom {{
+            font-size: 1.05rem;
+            color: {muted};
+            line-height: 1.8;
+            margin-bottom: 1.2rem;
+            max-width: 900px;
+        }}
+
+        .card {{
+            padding: 1.25rem;
+            border-radius: 20px;
+            background: {surface};
+            border: 1px solid {border};
+            min-height: 220px;
+            box-shadow: {shadow};
+        }}
+
+        .card h4 {{
+            color: {primary} !important;
+            margin-bottom: 0.6rem;
+        }}
+
+        .card p {{
+            color: {card_text};
+            line-height: 1.65;
+            margin-bottom: 0;
+        }}
+
+        .soft-box {{
+            padding: 1rem 1.2rem;
+            border-radius: 16px;
+            background: {soft_surface};
+            border-left: 5px solid {primary};
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }}
+
+        .soft-box h4 {{
+            margin-bottom: 0.5rem;
+            color: {primary} !important;
+        }}
+
+        .soft-box p {{
+            margin-bottom: 0;
+            color: {card_text};
+            line-height: 1.7;
+        }}
+
+        .footer {{
+            text-align: center;
+            color: {subtle};
+            font-size: 0.9rem;
+            padding-top: 2rem;
+            padding-bottom: 1rem;
+        }}
+
+        .chatbot-card-wrap {{
+            display: flex;
+            justify-content: flex-start;
+            margin-top: 0.4rem;
+            margin-bottom: 1.4rem;
+        }}
+
+        .chatbot-card {{
+            position: relative;
+            width: 430px;
+            background: {surface};
+            border: 1px solid {border};
+            border-radius: 24px;
+            padding: 22px 24px;
+            text-decoration: none;
+            color: {text} !important;
+            box-shadow: {shadow};
+            transition: all 0.2s ease;
+            display: block;
+        }}
+
+        .chatbot-card:hover {{
+            transform: translateY(-4px);
+            border-color: {primary};
+        }}
+
+        .chatbot-title {{
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: {primary};
+        }}
+
+        .chatbot-desc {{
+            font-size: 0.96rem;
+            color: {muted};
+            line-height: 1.6;
+        }}
+
+        .click-pointer {{
+            position: absolute;
+            right: 18px;
+            bottom: 14px;
+            font-size: 1.9rem;
+            animation: bounceClick 1.2s infinite;
+        }}
+
+        @keyframes bounceClick {{
+            0% {{ transform: translateY(0); }}
+            50% {{ transform: translateY(-10px); }}
+            100% {{ transform: translateY(0); }}
+        }}
+
+        div[data-testid="stForm"] {{
+            background: {surface};
+            border: 1px solid {border};
+            border-radius: 18px;
+            padding: 1rem;
+        }}
+
+        div[data-baseweb="select"] > div,
+        div[data-baseweb="input"] > div,
+        textarea,
+        input {{
+            background-color: {surface} !important;
+            color: {text} !important;
+        }}
+
+        .stTextInput input,
+        .stTextArea textarea {{
+            background-color: {surface} !important;
+            color: {text} !important;
+            border: 1px solid {border} !important;
+            border-radius: 12px !important;
+        }}
+
+        .stTextInput input:focus,
+        .stTextArea textarea:focus {{
+            border-color: {primary} !important;
+            box-shadow: 0 0 0 1px {primary} !important;
+        }}
+
+        .stButton > button,
+        .stFormSubmitButton > button {{
+            background-color: {primary};
+            color: white;
+            border: none;
+            border-radius: 12px;
+            padding: 0.6rem 1.2rem;
+            font-weight: 600;
+        }}
+
+        .stButton > button:hover,
+        .stFormSubmitButton > button:hover {{
+            background-color: #0062AD;
+            color: white;
+        }}
+
+        [data-testid="stRadio"] label,
+        [data-testid="stSelectbox"] label {{
+            color: {text} !important;
+        }}
+
+        .stInfo {{
+            border-radius: 14px;
+        }}
+        </style>
+        """,
+        unsafe_allow_html=True,
+    )
+
+# -----------------------------
+# State
+# -----------------------------
+if "theme_mode" not in st.session_state:
+    st.session_state.theme_mode = "Light"
+
+# -----------------------------
+# Top controls
+# -----------------------------
+col1, col2, col3 = st.columns([6, 1.3, 1.2])
+
+with col2:
+    language = st.selectbox("🌍", ["English", "한국어", "Русский", "Tiếng Việt"])
+
+T = content[language]
+
+with col3:
+    theme_display = st.selectbox(
+        T["theme_label"],
+        [T["theme_light"], T["theme_dark"]],
+        index=0 if st.session_state.theme_mode == "Light" else 1
+    )
+    st.session_state.theme_mode = "Light" if theme_display == T["theme_light"] else "Dark"
+
+apply_custom_css(st.session_state.theme_mode)
+
+page = st.radio("", T["nav"], horizontal=True)
 
 # -----------------------------
 # Pages
@@ -508,7 +658,7 @@ if page == T["nav"][0]:
             )
 
     st.write("")
-    show_main_image()
+    show_main_image(T["image_caption"], T["image_not_found"])
 
 elif page == T["nav"][1]:
     st.header(T["about_title"])
@@ -516,7 +666,7 @@ elif page == T["nav"][1]:
     st.markdown(
         f"""
         <div class="soft-box">
-        {T["about_note"]}
+            {T["about_note"]}
         </div>
         """,
         unsafe_allow_html=True,
