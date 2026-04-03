@@ -608,7 +608,7 @@ page = st.radio("", T["nav"], horizontal=True)
 # Pages
 # -----------------------------
 if page == T["nav"][0]:
-    chatbot_url = "https://claude.ai/public/artifacts/5b982ccf-9db2-4ed7-bf99-8be5ada85b2b"
+    chatbot_url = "https://claude.ai/public/artifacts/a3324fa8-e26c-4eb8-ab95-779f14b9f59c"
 
     st.title(T["hero_title"])
     st.markdown(
