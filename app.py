@@ -335,9 +335,7 @@ def is_valid_email(email):
 
 def show_main_image(caption, not_found_message):
     possible_paths = [
-        "women_dior.png",
-        "image/women_dior.png",
-        "images/women_dior.png",
+        "Gemini_Generated_Image_eyivvyeyivvyeyiv.png"
     ]
 
     for path in possible_paths:
