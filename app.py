@@ -329,13 +329,18 @@ def save_contact(name, email, message, language_used):
             language_used,
         ])
 
+
 def is_valid_email(email):
     email = email.strip()
     return "@" in email and "." in email and len(email) >= 5
 
+
 def show_main_image(caption, not_found_message):
     possible_paths = [
-        "Gemini_Generated_Image_eyivvyeyivvyeyiv.png"
+        "Gemini_Generated_Image_eyivvyeyivvyeyiv.png",
+        "women_dior.png",
+        "image/women_dior.png",
+        "images/women_dior.png",
     ]
 
     for path in possible_paths:
@@ -344,6 +349,7 @@ def show_main_image(caption, not_found_message):
             return
 
     st.warning(not_found_message)
+
 
 def apply_custom_css(theme_mode="Light"):
     if theme_mode == "Dark":
@@ -355,7 +361,7 @@ def apply_custom_css(theme_mode="Light"):
         muted = "#D1D5DB"
         subtle = "#A1A1AA"
         card_text = "#F5F5F5"
-        link = "#66B2FF"
+        input_text = "#FFFFFF"
         shadow = "0 8px 24px rgba(0, 0, 0, 0.35)"
     else:
         bg = "#FFFFFF"
@@ -366,21 +372,30 @@ def apply_custom_css(theme_mode="Light"):
         muted = "#4B5563"
         subtle = "#6B7280"
         card_text = "#2D3748"
-        link = "#0077D4"
+        input_text = "#212121"
         shadow = "0 8px 24px rgba(0, 119, 212, 0.10)"
 
     primary = "#0077D4"
+    primary_hover = "#0062AD"
 
     st.markdown(
         f"""
         <style>
-        html, body, [class*="css"] {{
-            font-family: "Inter", "Segoe UI", sans-serif;
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+        html, body, [class*="css"], [data-testid="stAppViewContainer"],
+        [data-testid="stMarkdownContainer"], [data-testid="stSidebar"],
+        button, input, textarea, select {{
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
         }}
 
         .stApp {{
             background: {bg};
             color: {text};
+        }}
+
+        [data-testid="stAppViewContainer"] {{
+            background: {bg};
         }}
 
         [data-testid="stHeader"] {{
@@ -393,10 +408,16 @@ def apply_custom_css(theme_mode="Light"):
 
         h1, h2, h3, h4, h5, h6 {{
             color: {text} !important;
+            font-weight: 700 !important;
+            letter-spacing: -0.01em;
         }}
 
         p, li, label, div, span {{
             color: {text};
+        }}
+
+        p {{
+            line-height: 1.7;
         }}
 
         .hero-subtitle-custom {{
@@ -524,19 +545,23 @@ def apply_custom_css(theme_mode="Light"):
         }}
 
         div[data-baseweb="select"] > div,
-        div[data-baseweb="input"] > div,
-        textarea,
-        input {{
+        div[data-baseweb="input"] > div {{
             background-color: {surface} !important;
-            color: {text} !important;
+            color: {input_text} !important;
+            border-color: {border} !important;
         }}
 
         .stTextInput input,
         .stTextArea textarea {{
             background-color: {surface} !important;
-            color: {text} !important;
+            color: {input_text} !important;
             border: 1px solid {border} !important;
             border-radius: 12px !important;
+        }}
+
+        .stTextInput input::placeholder,
+        .stTextArea textarea::placeholder {{
+            color: {subtle} !important;
         }}
 
         .stTextInput input:focus,
@@ -557,12 +582,14 @@ def apply_custom_css(theme_mode="Light"):
 
         .stButton > button:hover,
         .stFormSubmitButton > button:hover {{
-            background-color: #0062AD;
+            background-color: {primary_hover};
             color: white;
         }}
 
         [data-testid="stRadio"] label,
-        [data-testid="stSelectbox"] label {{
+        [data-testid="stSelectbox"] label,
+        .stSelectbox label,
+        .stRadio label {{
             color: {text} !important;
         }}
 
